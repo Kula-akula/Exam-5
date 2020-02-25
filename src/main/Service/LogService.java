@@ -34,10 +34,10 @@ public class LogService {
         return logDao.createLog(log);
     }
 
-//    @DELETE
-//    @Path("/{userId}")
-//    @Produces(MediaType.APPLICATION_JSON)
-//    public String delete(@PathParam("userId") int userId){
-//        return logDao.deleteById(userId) ? "deleted" : "not deleted";
-//    }
+    @DELETE
+    @Path("/{logId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String delete(@PathParam("logId") int userId){
+        return logDao.deleteById(userId) ? "deleted" : "not deleted";
+    }
 }

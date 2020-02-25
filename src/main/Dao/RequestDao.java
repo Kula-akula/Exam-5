@@ -37,5 +37,17 @@ public class RequestDao {
         logDao.createLog(log);
         return null;
     }
+    public boolean deleteById(int id) {
+        String SQL = "delete from requests where id=?";
+        try (Connection connection = DB.connect();
+             PreparedStatement statement = connection.prepareStatement(SQL)){
+            statement.setInt(1, id);
+            int count = statement.executeUpdate();
+            return count > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
 }

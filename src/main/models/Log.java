@@ -13,6 +13,7 @@ import java.util.Date;
 @XmlRootElement(name="request")
 
 public class Log {
+    private int id;
     private String name;
     private Integer birthDate;
     private String gender;
