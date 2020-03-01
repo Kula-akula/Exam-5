@@ -1,0 +1,14 @@
+create table requests (
+id serial primary key,
+name varchar(50) not null,
+birth_date integer not null,
+gender varchar(20) not null
+);
+
+create table logs(
+id serial primary key,
+name varchar(50) not null,
+birth_date integer not null,
+gender varchar(20) not null,
+created_date timestamp not null
+);
